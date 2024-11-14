@@ -8,5 +8,9 @@
 
 Клонируйте репозиторий:
 ```
-
+https://github.com/ParkartI/homework.git
 ```
+
+## Тестирование:
+
+Запустите код в модуле test.py
