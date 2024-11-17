@@ -8,9 +8,8 @@
 
 1. Клонируйте репозиторий:
 ```
-git clone https://github.com/username/project-x.git
+git clone https://github.com/ParkartI/homework/tree/feature/homework_10_1
 ```
-2. Установите зависимости:
-```
-pip install -r requirements.txt
-```
+## Запуск:
+
+Запустите модуль tests\test.py
