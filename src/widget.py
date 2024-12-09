@@ -19,8 +19,10 @@ def mask_account_card(card_or_account: str) -> str:
 
     if len(nubmer_coa) == 20:
         mask_number = get_mask_account(nubmer_coa)
-    else:
+    elif len(nubmer_coa) == 16:
         mask_number = get_mask_card_number(nubmer_coa)
+    else:
+        raise ValueError("Введены некорректные данные")
 
     while name_coa[space_counter] == " ":
         name_coa = name_coa[: len(name_coa) - 1]
@@ -32,8 +34,11 @@ def mask_account_card(card_or_account: str) -> str:
     return opperation_result
 
 
-def get_date(date_string: str) -> str:
-    """Фунция возвращает текущую дату в формате "дд.мм.гггг" """
+def get_date(date_str: str) -> str:
+    try:
+        date_obj = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S.%f")
 
-    dt = datetime.fromisoformat(date_string)
-    return dt.strftime("%d.%m.%Y")
+        return date_obj.strftime("%d.%m.%Y")
+
+    except ValueError:
+        return "Неверный формат даты"
