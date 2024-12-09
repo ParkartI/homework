@@ -12,4 +12,4 @@ git clone https://github.com/ParkartI/homework/tree/feature/homework_10_1
 ```
 ## Запуск:
 
-Запустите модуль tests\test.py
+Отуройте модуль tests. Запустите находящиеся там файлы
